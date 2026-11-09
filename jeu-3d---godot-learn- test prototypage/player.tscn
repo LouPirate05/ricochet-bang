@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://btad70ea4oagh"]
+
+[ext_resource type="Texture2D" uid="uid://p1ws8y13334c" path="res://Capture d'écran 2026-10-29 132350.png" id="1_4flbx"]
+[ext_resource type="FontFile" uid="uid://d3ckd4v7emymk" path="res://matcha_style/Matcha Style.ttf" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://dqnfktieb82yj" path="res://camera_3d.gd" id="3_i3pqv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iatyx"]
+font = ExtResource("2_onrkg")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h8xou"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_h8xou"]
+
+[node name="player" type="Node3D" unique_id=1089279907]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=38767569]
+color = Color(0.9990863, 0.9990863, 0.9990863, 1)
+
+[node name="CaptureD\'écran20261029132350" type="Sprite2D" parent="CanvasModulate" unique_id=1867192872]
+position = Vector2(242, 268)
+texture = ExtResource("1_4flbx")
+
+[node name="Control" type="Control" parent="." unique_id=1101021281]
+layout_mode = 3
+anchor_left = 0.023000002
+anchor_top = 0.027
+anchor_right = 0.023000002
+anchor_bottom = 0.027
+offset_left = 7.503998
+offset_top = 5.5039997
+offset_right = 47.503998
+offset_bottom = 45.503998
+
+[node name="Label" type="Label" parent="Control" unique_id=60315057]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 36.0
+offset_bottom = 17.0
+text = "test fonts 145 3:!)>"
+label_settings = SubResource("LabelSettings_iatyx")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1964527807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3846387)
+script = ExtResource("3_i3pqv")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1241405565]
+motion_mode = 1
+
+[node name="Pivot" type="Node3D" parent="CharacterBody3D" unique_id=1848712531]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=440920528]
+transform = Transform3D(0.72, 0, 0, 0, 0.72, 0, 0, 0, 0.72, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_h8xou")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=482390208]
+transform = Transform3D(0.885, 0, 0, 0, 0.885, 0, 0, 0, 0.885, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_h8xou")
