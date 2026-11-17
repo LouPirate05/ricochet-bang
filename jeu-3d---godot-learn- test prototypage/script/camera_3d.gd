@@ -16,16 +16,15 @@ var target_velocity = Vector3.ZERO
 
 func _physics_process(delta):
 	var direction = Vector3.ZERO
-	$Pivot.rotation.x = PI / 6 * velocity.y / jump_impulse
-#ça c pour donner la physique du player (au-dessus)
-
 
 	#ça c pour les control et les inputs du joueur!!(en-dessous)
 	if Input.is_action_pressed("Move_Right"):
-		direction.x += 1
+		direction.y += 10
 	if Input.is_action_pressed("Move_Left"):
-		direction.x -= 1
-	if Input.is_action_pressed("Move_Backward"):
-		direction.z += 1
-	if Input.is_action_pressed("Move_Forward"):
-		direction.z -= 1
+		direction.y -= 10
+#	if Input.is_action_pressed("Move_Backward"):
+#		direction.y += 10
+#	if Input.is_action_pressed("Move_Forward"):
+#		direction.y -= 10
+	
+	
