@@ -62,6 +62,7 @@ text = "test fonts 145 3:!)>"
 label_settings = SubResource("LabelSettings_iatyx")
 
 [node name="camera_player" type="Camera3D" parent="." unique_id=805231503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.3330345)
 script = ExtResource("7_kbkvm")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1241405565]
