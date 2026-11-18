@@ -14,17 +14,23 @@ extends Camera3D
 var velocity =  PI
 var target_velocity = Vector3.ZERO
 
-func _physics_process(delta):
-	var direction = Vector3.ZERO
 
+##ça sa sert à garder l'info du mouvement qu'on donne.
+func _physic_process(_delta):
+	var direction = Vector3.ZERO
+	
 	#ça c pour les control et les inputs du joueur!!(en-dessous)
 	if Input.is_action_pressed("Move_Right"):
-		direction.y += 10
+		direction.rotate.y += 2000
 	if Input.is_action_pressed("Move_Left"):
-		direction.y -= 10
+		direction.y -= 2000
+		
+	if direction != Vector3.ZERO:
+		direction = direction.normalized()
+		# Setting the basis property will affect the rotation of the node.
+		$Pivot.basis = Basis.looking_at(direction)
+		
 #	if Input.is_action_pressed("Move_Backward"):
 #		direction.y += 10
 #	if Input.is_action_pressed("Move_Forward"):
 #		direction.y -= 10
-	
-	

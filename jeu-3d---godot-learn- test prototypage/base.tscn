@@ -36,9 +36,6 @@ mesh = SubResource("BoxMesh_w34n1")
 transform = Transform3D(1, 0, 0, 0, -0.0054176026, 0.99998534, 0, -0.99998534, -0.0054176026, 0, 16.12283, 0)
 shadow_enabled = true
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=389109500]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.29498, 0)
-
 [node name="CollisionShape3D (collision de la forme)" type="CollisionShape3D" parent="." unique_id=1466342204]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.29498, 0)
 shape = SubResource("BoxShape3D_h8xou")
@@ -49,4 +46,3 @@ mesh = SubResource("CapsuleMesh_mae0v")
 surface_material_override/0 = SubResource("StandardMaterial3D_h8xou")
 
 [node name="player" parent="." unique_id=1089279907 instance=ExtResource("1_rpg24")]
-transform = Transform3D(-0.2048146, 0, 0.9788009, 0, 1, 0, -0.9788009, 0, -0.2048146, 0, 0, 0)
