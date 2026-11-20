@@ -35,19 +35,51 @@ func _input(event):
 func updateDirection():
 	##sa permet de donner la direction dans laquel les inputs tourne la camera
 	var dir = Vector3()
+	
+	
 	if Input.is_action_pressed("Move_forward"):
 		dir += Vector3.FORWARD
+	##	if Input.is_action_pressed("springting"):
+		##	position += direction * current_speed * delta
+		
+		
 	if Input.is_action_pressed("Move_backward"):
 		dir += Vector3.BACK
+		if Input.is_action_pressed("springting"):
+			dir += 2*(Vector3.BACK)*(velocity*2)
+		
+		
 	if Input.is_action_pressed("Move_down"):
 		dir += Vector3.DOWN
+		##if Input.is_action_pressed("springting"):
+		##	position += direction * current_speed * delta
+			
+			
 	if Input.is_action_pressed("Move_up"):
 		dir += Vector3.UP
+	##	if Input.is_action_pressed("springting"):
+			##position += direction * current_speed * delta
+		
+		
 	if Input.is_action_pressed("Move_right"):
 		dir += Vector3.RIGHT
+		##if Input.is_action_pressed("springting"):
+		##	position += direction * current_speed * delta
+			
+		
 	if Input.is_action_pressed("Move_left"):
 		dir += Vector3.LEFT
+	##	if Input.is_action_pressed("springting"):
+			##position += direction * current_speed * delta
+		
+		
+	if Input.is_action_pressed("springting"):
+		dir  += velocity
 	if dir == Vector3.ZERO:
 		velocity = Vector3.ZERO
 	
 	return dir.normalized()
+	
+	
+func _process_camera_turn(delta):
+	rotation.y += 1.0*delta

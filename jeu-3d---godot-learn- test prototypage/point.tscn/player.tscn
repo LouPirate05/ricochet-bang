@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://btad70ea4oagh"]
 
 [ext_resource type="Texture2D" uid="uid://p1ws8y13334c" path="res://assets pas important/Capture d'écran 2026-10-29 132350.png" id="1_jaq5a"]
-[ext_resource type="Script" uid="uid://canwfabt34njd" path="res://point.tscn/control.gd" id="2_eeouq"]
+[ext_resource type="Script" uid="uid://canwfabt34njd" path="res://script/control.gd" id="2_eeouq"]
 [ext_resource type="FontFile" uid="uid://d3ckd4v7emymk" path="res://matcha_style/Matcha Style.ttf" id="2_ie3af"]
 [ext_resource type="Texture2D" uid="uid://bqv4rt0jjg1nr" path="res://assets pas important/Fichier 22.png" id="5_eeouq"]
 [ext_resource type="Texture2D" uid="uid://h2gay2c4foyc" path="res://assets pas important/Fichier 23.png" id="6_vpagf"]
 [ext_resource type="Texture2D" uid="uid://bawt4gkms5fda" path="res://assets pas important/Fichier 24.png" id="7_0v1fi"]
-[ext_resource type="Script" uid="uid://fjum4kxjam7k" path="res://point.tscn/camera_player.gd" id="7_kbkvm"]
-[ext_resource type="Script" uid="uid://dvcifnqdxj4hl" path="res://point.tscn/player_scrpit.gd" id="8_0v1fi"]
+[ext_resource type="Script" uid="uid://fjum4kxjam7k" path="res://script/camera_player.gd" id="7_kbkvm"]
+[ext_resource type="Script" uid="uid://dvcifnqdxj4hl" path="res://script/player_scrpit.gd" id="8_0v1fi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iatyx"]
 font = ExtResource("2_ie3af")
@@ -27,7 +27,7 @@ scale = Vector2(0.096153885, 0.096153885)
 texture = ExtResource("5_eeouq")
 
 [node name="CaptureD\'écran20261029132350" type="Sprite2D" parent="canva_ui_ux" unique_id=1867192872]
-position = Vector2(242, 268)
+position = Vector2(219, 252)
 texture = ExtResource("1_jaq5a")
 
 [node name="Fichier23" type="Sprite2D" parent="canva_ui_ux" unique_id=1553815237]
